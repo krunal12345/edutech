@@ -1,0 +1,61 @@
+@use "sass:map";
+
+$white: #FFFFFF;
+$black: #000000;
+
+$gray-palette: (
+  5:   #FCFAFA,
+  10:  #F1F1F1,
+  25:  #DCDCDC,
+  50:  #C4C4C4,
+  100: #A7A7A7,
+  200: #8A8A8A,
+  300: #6C6C6C,
+  400: #4F4F4F,
+  500: #424242,
+  600: #353535,
+  700: #282828,
+  800: #1A1A1A,
+  900: #101010
+);
+
+$primary-palette: (
+  25:  #D0D3DE,
+  50:  #B1B5C8,
+  100: #8A90AC,
+  200: #636C90,
+  300: #3C4775,
+  400: #152259,
+  500: #121C4A,
+  600: #0E173B,
+  700: #0B112D,
+  800: #070B1E,
+  900: #040712
+);
+
+$secondary-palette: (
+  10:  #EBF6FF,
+  25:  #D5E7F6,
+  50:  #B9D7F1,
+  100: #B9D7F1,
+  200: #73B0E2,
+  300: #509CDB,
+  400: #2D88D4,
+  500: #2671B1,
+  600: #1E5B8D,
+  700: #17446A,
+  800: #0F2D47,
+  900: #091B2A
+);
+
+@function gray($shade) {
+  @return map.get($gray-palette, $shade);
+}
+
+@function primary($shade) {
+  @return map.get($primary-palette, $shade);
+}
+
+@function secondary($shade) {
+  @return map.get($secondary-palette, $shade);
+}
